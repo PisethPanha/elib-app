@@ -9,13 +9,6 @@ services:
     restart: always
     ports:
       - "5000:5000"
-    depends_on:
-      - mysql
-    environment:
-      DB_HOST: mysql
-      DB_USER: root
-      DB_PASSWORD: yourpassword
-      DB_NAME: yourdb
 
   frontend:
     build:
@@ -27,5 +20,3 @@ services:
       - "3000:3000"
     depends_on:
       - backend
-
-

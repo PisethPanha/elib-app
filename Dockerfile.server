@@ -1,11 +1,9 @@
-# Dockerfile.client
 FROM node:18-alpine
 
 WORKDIR /app
-COPY client/package*.json ./
+COPY server/package*.json ./
 RUN npm install
-COPY client ./
-RUN pnpm run build
+COPY server ./
 
-EXPOSE 3000
-CMD ["npm", "start"]
+EXPOSE 5000
+CMD ["node", "server.js"]
