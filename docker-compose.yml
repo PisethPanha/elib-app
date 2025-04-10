@@ -12,8 +12,8 @@ services:
 
   frontend:
     build:
-      context: .
-      dockerfile: Dockerfile.client
+      context: ./elibrary_front_version_next
+      dockerfile: ../Dockerfile.client
     container_name: frontend
     restart: always
     ports:
