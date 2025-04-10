@@ -1,7 +1,7 @@
 FROM node:18-alpine
 
 WORKDIR /app
-COPY elibrary_front_version_next/package*.json ./
+COPY elibrary_front_version_next/package.json ./
 RUN pnpm install
 COPY elibrary_front_version_next ./
 RUN npm run build
